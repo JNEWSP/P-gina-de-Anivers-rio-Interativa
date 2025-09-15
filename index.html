@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <script type="module" defer src="main.js"></script>
+    <title>Feliz Aniversário!</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="hero">
+          <h1>Parabéns Maria!<br/><span id="confetti-emoji" style="cursor: pointer;">🎉</span></h1>
+          <p>Feliz Aniversário, Desejo a você um dia cheio de alegria!</p>
+        </div>
+        <img src="https://play-lh.googleusercontent.com/nUzK8WjxbT-X59mlDYyPej6HO_j45Ou7qOIIgnJbTO6IzNA6iAU_kMdA38hHGONBv9c" alt="Bolo de Aniversário" id="birthday-cake" />
+        <audio controls autoplay loop>
+            <source src="audio-aniversario.mp3" type="audio/mpeg"> 
+            
+        </audio>
+    </div>
+
+    <script>
+        window.onload = function() {
+            confetti({
+                particleCount: 500,
+                spread: 200,
+                origin: { y: 0.6 }
+            });
+        };
+
+        
+        document.getElementById('confetti-emoji').addEventListener('click', function() {
+            confetti({
+                particleCount: 800,
+                spread: 700,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
